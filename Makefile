@@ -15,7 +15,7 @@ IMAGE_REPOS     := ghcr.io/charlie0129 docker.io/charlie0129
 # Container image name
 IMAGE_NAME      := docker
 # Container image tag
-IMAGE_TAG       ?= dind-26.1.2-make-alpine3.19
+IMAGE_TAG       ?= 26.1.2-make-alpine3.19
 # Full Docker image name
 IMAGE_REPO_TAGS ?= $(addsuffix /$(IMAGE_NAME):$(IMAGE_TAG),$(IMAGE_REPOS))
 

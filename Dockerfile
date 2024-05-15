@@ -1,4 +1,4 @@
-FROM docker:26.1.2-dind-alpine3.19
+FROM docker:26.1.2-alpine3.19
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories && \
     apk update && \
     apk add --no-cache \ 
