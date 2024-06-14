@@ -6,7 +6,8 @@ RUN apk add --no-cache \
     make \
     git \
     bash \
-    tar && \
+    tar \
+    curl && \
     git config --global --add safe.directory '*' && \
     git config --global credential.helper store
 
