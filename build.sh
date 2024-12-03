@@ -5,7 +5,7 @@ set -o errexit
 platforms="linux/amd64,linux/arm64"
 query_url="https://hub.docker.com/v2/repositories/library/docker/tags?page_size=15&page=1&name=-alpine"
 
-tags=($(curl -fsSL "$query_url" | jq -r ".results[].name"))
+tags=($(curl -fsSL "$query_url" | jq -r ".results[].name" | grep -v rc))
 
 addmake() {
     local tag=$1
